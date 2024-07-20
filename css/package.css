@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+   --main-color: #8e44ad;
+   --black: #222;
+   --white: #fff;
+   --light-black: #777;
+   --light-white: #fff9;
+   --dark-bg: rgba(0, 0, 0, .7);
+   --light-bg: #eee;
+   --border: .1rem solid var(--black);
+   --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+   --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
+}
+
+* {
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+
+html {
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+   width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+   background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+   background-color: var(--main-color);
+}
+
+section {
+   padding: 5rem 10%;
+}
+
+@keyframes fadeIn {
+   0% {
+      transform: scale(0);
+      opacity: 0;
+   }
+}
+
+.heading {
+   background-size: cover !important;
+   background-position: center !important;
+   position: relative;
+   z-index: 0;
+}
+
+.heading h1 {
+   font-size: 5rem;
+   text-transform: uppercase;
+   color: var(--white);
+   text-align: center;
+   font-weight: bolder;
+   text-shadow: var(--text-shadow);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 30rem;
+}
+
+.heading-title {
+   text-align: center;
+   font-size: 4rem;
+   padding-bottom: 2rem;
+   color: var(--black);
+   text-transform: uppercase;
+}
+
+.btn {
+   display: inline-block;
+   margin-top: 1rem;
+   border-radius: .5rem;
+   background: var(--main-color);
+   color: var(--white);
+   cursor: pointer;
+   padding: 1rem 3rem;
+   font-size: 1.7rem;
+}
+
+.btn:hover {
+   background: var(--black);
+   letter-spacing: .1rem;
+}
+
+.header {
+   padding: 2rem 9%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background: var(--white);
+   box-shadow: var(--box-shadow);
+   position: relative;
+}
+
+.header .logo {
+   font-size: 2.5rem;
+   color: var(--black);
+   font-weight: bolder;
+}
+
+.header .navbar a {
+   font-size: 1.7rem;
+   margin-left: 2rem;
+   color: var(--light-black);
+}
+
+.header .navbar a:hover {
+   color: var(--black);
+}
+
+#menu-btn {
+   font-size: 2.5rem;
+   cursor: pointer;
+   color: var(--black);
+   display: none;
+}
+
+.packages .box-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+}
+
+.packages .box {
+   flex: 1 1 22rem;
+   padding: 2rem;
+   text-align: center;
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+   border: var(--border);
+}
+
+.packages .box .image {
+   height: 15rem;
+   overflow: hidden;
+   margin-bottom: 1rem;
+}
+
+.packages .box .image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform .3s;
+}
+
+.packages .box .image:hover img {
+   transform: scale(1.1);
+}
+
+.packages .box .content h3 {
+   font-size: 2rem;
+   color: var(--black);
+}
+
+.packages .box .content p {
+   font-size: 1.4rem;
+   color: var(--light-black);
+   margin: 1rem 0;
+}
+
+.footer {
+   background: var(--black);
+   padding: 2rem 9%;
+}
+
+.footer .box-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 5rem;
+}
+
+.footer .box {
+   flex: 1 1 20rem;
+}
+
+.footer .box h3 {
+   font-size: 2.2rem;
+   color: var(--white);
+   padding: 1rem 0;
+}
+
+.footer .box a {
+   display: block;
+   font-size: 1.4rem;
+   color: var(--light-white);
+   margin: 1rem 0;
+}
+
+.footer .box a i {
+   color: var(--main-color);
+   padding-right: .5rem;
+}
+
+.footer .box a:hover i {
+   padding-right: 2rem;
+}
+
+@media (max-width:991px) {
+   html {
+      font-size: 55%;
+   }
+
+   section {
+      padding: 3rem 2rem;
+   }
+}
+
+@media (max-width:768px) {
+   #menu-btn {
+      display: inline-block;
+      transition: .2s linear;
+   }
+
+   .header .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-top: var(--border);
+      border-bottom: var(--border);
+      padding: 2rem 1rem;
+      text-align: center;
+      display: none;
+   }
+
+   .header .navbar.active {
+      display: inline-block;
+   }
+
+   .header .navbar a {
+      display: block;
+      margin: 1rem 0;
+      font-size: 2rem;
+   }
+
+   .heading h1 {
+      font-size: 4rem;
+   }
+
+   .heading-title {
+      font-size: 3rem;
+   }
+
+   .footer .box-container{
+      flex-direction: column;
+   }
+}
+
+@media (max-width:450px) {
+   html {
+      font-size: 50%;
+   }
+
+   .heading h1 {
+      font-size: 3.5rem;
+   }
+}

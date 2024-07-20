@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register Form</title>
+    <link rel="icon" href="./assets/RRlogo.jpeg" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="./home.html" class="logo">TravelTryst</a>
+        <nav class="navbar">
+            <a href="./register.html">Register</a>
+            <a href="./login.html">Login</a>
+        </nav>
+    </header>
+
+    <div class="center">
+        <h1>Register</h1>
+        <form action="register.sql" method="post">
+            <div class="txt_field">
+                <input type="text" id="UserName" aria-label="UserName" required name="UserName">
+                <span></span>
+                <label>User Name</label>
+            </div>
+            <div class="txt_field">
+                <input type="email" id="email" aria-label="email" required name="email">
+                <label>E-mail</label>
+                <span></span>
+            </div>
+            <div class="txt_field">
+                <input type="tel" id="MobileNumber" aria-label="MobileNumber" required name="MobileNumber">
+                <label>Mobile Number</label>
+                <span></span>
+            </div>
+            <div class="txt_field">
+                <input type="password" id="password" aria-label="Password" required name="password">
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" id="confirmpassword" aria-label="ConfirmPassword" required
+                    name="confirmpassword">
+                <span></span>
+                <label>Confirm Password</label>
+            </div>
+            <input type="submit" aria-label="signup_link" value="SIGN UP">
+            <div class="signup_link">
+                Already have an account? <a href="login.html">Sign In</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
